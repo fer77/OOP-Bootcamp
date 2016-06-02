@@ -67,7 +67,7 @@ $controller->show(); //This sends a message to the logger.
 
 //..
 
-
+/*
 interface CastsToJson {  // Or Jsonable
   public function toJson();
 
@@ -75,3 +75,4 @@ interface CastsToJson {  // Or Jsonable
 
 class User implements CastsToJson {}
 class Collection implements CastsToJson {}
+*/
