@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Acme;
 //Don't forget to run "composer dump-autoload" in terminal.
@@ -7,7 +7,7 @@ use Acme\user\Person;
 
 class Business
 {
-	
+
 	protected $staff;
 						//Dependency: Business "depends" on the Staff in order to work.
 	public function __construct(Staff $staff)

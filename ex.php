@@ -11,7 +11,7 @@ require 'src/staff.php';
 
 //add this to your "index.php" file:
 //require 'vendor/autoload.php';
-
+/*
 use Acme\user\Person;
 use Acme\Staff;
 use Acme\Business;
@@ -25,3 +25,4 @@ $laracasts = new Business($staff);
 $laracasts->hire(new Person("Jane Doe"));
 
 var_dump($laracasts->getStaffMembers());
+*/
