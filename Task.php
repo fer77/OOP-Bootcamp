@@ -10,7 +10,7 @@
 
  	public $completed = false;
 
- 	//* method, a function iside a class.
+ 	//* method, a function inside a class.
  	public function __construct($title, $description)
  	{
  		//* Whenever you create a "new Task" the contents here will fire.
