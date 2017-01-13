@@ -1,27 +1,27 @@
 <?php 
 
-//* Why use 'getter' & 'setter' methods?
-//* 'getter' & 'setter' methods give protection and security to applications.
-//* For example an age limit can be set with these two methods.
+//* Encapsulation:
+//* A "black box" for our objects, that only exposes the methods and behavior that are apropiate to them (relevant to the public interface).
+//* Objects can be encapsulated in two ways:
+//* 1. private: this method may only and exclusivly be accessed from within its class, can not be 'extended'.
+//* 2. protected: same as private, but can be 'extended'.
 
 class Person {
 
-	public $name;
+//* Ideally we want to hide information and behavior as much as we can.
+	private $name;
 
-	public $age;
+	private $age;
 
 	function __construct($name)
 	{
 		$this->name = $name;
 	}
-	//* GETTER:
-	//* With 'getters' & 'setters' we can introduced whatever kind of behavior the app needs.
+	
 	public function getAge() {
 		return $this->age * 365;
 	}
-	//* There could be behavior associated with 'setting' or 'getting' a particular property.
-	//* The problem starts when properties are used directly($fernando->age = 35;), there's no way to attach (hook) this behavior.
-	//* SETTER:
+	
 	public function setAge($age) {
 		if($age < 18) 
 		{
@@ -32,13 +32,10 @@ class Person {
 }
 
 $fernando = new Person('Fer');
-//* Pass a new property:
-//$fernando->age = 35; //* There's no way to attach (hook) our method setAge().  $fernando->setAge(17) won't throw setAge's exeption.
-//$fernando->setAge(17);
 $fernando->setAge(35);
-//$fernando->age++;
+//* This app has 'getters' & 'setters' but they can be overwritten direcly:
+//$fernando->age = 25; //* Bypasses our setAge() 'setter'.
 
 var_dump($fernando->getAge());
-
 
  ?>
