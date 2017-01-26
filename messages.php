@@ -66,4 +66,6 @@ $bobsBurgers->hire(new Person('Gene Belcher'));
 
 var_dump($bobsBurgers->getStaffMembers());
 
+//* In the real world these classes would not be grouped together in one single file, like here.  Instead they would be in their own files.
+
  ?>
